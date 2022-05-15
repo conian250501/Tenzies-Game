@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  background-color: darkslategrey;
+  padding: 20px;
+}
+main {
+  background-color: rgb(255, 255, 255);
+  height: 600px;
+  max-width: 800px;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.die__container {
+  margin-top: 16px;
+  display: grid;
+  grid-template: auto auto/repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 16px;
+}
+.die__face {
+  height: 60px;
+  width: 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: ghostwhite;
+}
+.die__number {
+  font-size: 2rem;
+}
+.roll__dice {
+  height: 50px;
+  width: 80px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(0, 110, 255);
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.roll__dice:focus {
+  outline: none;
+}
+.roll__dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 767px) {
+  .AppTitle {
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+  }
+  .die__face {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .die__number {
+    font-size: 20px;
+  }
+  .roll__dice {
+    font-size: 20px;
+    padding: 16px 20px;
+    line-height: 0;
+  }
+}
